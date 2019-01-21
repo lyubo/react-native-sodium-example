@@ -36,7 +36,7 @@ class TestValue extends Component {
 
   }
 
-export default  class Example extends Component {
+export default class Example extends Component {
 
   state: {
     sodium_version_string: string,
@@ -258,7 +258,7 @@ export default  class Example extends Component {
     this._testBox2()
   }
 
-  componentWillMount() {
+  componentDidMount() {
      this._testSodium()
   }
 
