@@ -1,60 +1,141 @@
-// @flow
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
 
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react';
 import {
+  SafeAreaView,
   StyleSheet,
+  ScrollView,
+  View,
   Text,
-  ScrollView,View,TouchableHighlight,NativeModules
-} from 'react-native'
+  StatusBar,
+  NativeModules
+} from 'react-native';
 
-import Base64 from 'base64-js'
-import Sodium from 'react-native-sodium'
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+
+import Base64 from 'base64-js';
+import Sodium from 'react-native-sodium';
 
 class TestResult extends Component {
-    render() {
-      const text = (this.props.value == null) ? "?" :(this.props.value ? "Pass":"Fail")
-      const style = {color:(this.props.value == null ? "black" : (this.props.value ? "green":"red"))}
-      return (
+  render() {
+    const text = (this.props.value == null) ? "?" :(this.props.value ? "Pass":"Fail")
+    const style = {color:(this.props.value == null ? "black" : (this.props.value ? "green":"red"))}
+    return (
         <View style={styles.testContainer}>
           <Text style={styles.testLabel}>{this.props.name}:</Text>
           <Text style={[styles.testResult,style]}>{text}</Text>
         </View>
-      );
-    }
-
+    );
   }
 
+}
+
 class TestValue extends Component {
-    render() {
-      return (
+  render() {
+    return (
         <View style={styles.testContainer}>
           <Text style={styles.testLabel}>{this.props.name}:</Text>
           <Text style={[styles.testResult]}>{this.props.value}</Text>
         </View>
-      );
-    }
-
+    );
   }
 
-export default class Example extends Component {
+}
 
-  state: {
-    sodium_version_string: string,
-   }
+class Example extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {}
+
+
+  componentDidMount() {
+    this._testSodium()
   }
 
-
-  _handleError(error) {
-    console.log(error)
-    this.setState({sodiumError: error})
+  render() {
+    return (
+        <ScrollView style={{flex:1}}>
+          {/*<TouchableHighlight onPress={() => this._testSodium()}>*/}
+          {/*  <Text style={styles.welcome}>*/}
+          {/*    Salted React Native!*/}
+          {/*  </Text>*/}
+          {/*</TouchableHighlight>*/}
+          <TestValue name="sodium_version_string" value={this.state.sodium_version_string}/>
+          <TestResult name="randombytes_random" value={this.state.randombytes_random}/>
+          <TestResult name="randombytes_uniform" value={this.state.randombytes_uniform}/>
+          <TestResult name="randombytes_buf" value={this.state.randombytes_buf}/>
+          <TestResult name = "crypto_secretbox1" value={this.state.crypto_secretbox1}/>
+          <TestResult name = "crypto_auth" value={this.state.crypto_auth}/>
+          <TestResult name = "crypto_auth_verify" value={this.state.crypto_auth_verify}/>
+          <TestResult name = "crypto_box1" value={this.state.crypto_box1}/>
+          <TestResult name = "crypto_box2" value={this.state.crypto_box2}/>
+        </ScrollView>
+    )
   }
 
-  _testRandom1() {
-    this.setState({randombytes_uniform:null})
+}
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     //justifyContent: 'center',
+//     //alignItems: 'center',
+//     backgroundColor: '#F5FCFF',
+//     padding:5
+//   },
+//
+//   testContainer: {
+//     flex: 1,
+//     flexDirection:'row',
+//     padding:5
+//   },
+//
+//   testLabel: {
+//     flex:4,
+//     textAlign: 'left',
+//     color: '#333333',
+//   },
+//
+//   testResult: {
+//     flex:1,
+//     textAlign: 'center',
+//   },
+//
+//   welcome: {
+//     fontSize: 20,
+//     textAlign: 'center',
+//     margin: 10,
+//   },
+//   instructions: {
+//     textAlign: 'left',
+//     color: '#333333',
+//     marginBottom: 5,
+//   },
+// })
+
+const App: () => React$Node = () => {
+
+  const [ state, setState ] = useState({
+    sodium_version_string: '',
+  });
+
+  const _handleError = (error) =>  {
+    console.log(error);
+    setState({sodiumError: error});
+  }
+
+  const _testRandom1 = () => {
+    setState({randombytes_uniform:null})
     let freq = [];
     let p = []
     for (i = 0; i < 256; ++i) freq[i] = 0;
@@ -62,11 +143,11 @@ export default class Example extends Component {
     Promise.all(p).then(() => {
       var fail = false
       for (i = 0; i < 256 && !fail; ++i) if (!freq[i]) fail = true
-      this.setState({randombytes_uniform:!fail})
+      setState({randombytes_uniform:!fail})
     })
   }
 
-  _testRandom2() {
+  const _testRandom2 = () =>  {
     this.setState({randombytes_buf:null})
     let freq = [];
     for (i = 0; i < 256; ++i) freq[i] = 0;
@@ -79,25 +160,30 @@ export default class Example extends Component {
     })
   }
 
-  _testRandom3() {
-    this.setState({randombytes_random:null})
+  const _testRandom3 = () =>  {
+    // this.setState({
+    //   randombytes_random: null
+    // });
     let freq = [];
-    let p = []
-    for (i = 0; i < 256; ++i) freq[i] = 0;
-    for (i = 0; i < 5*256; ++i) p.push(Sodium.randombytes_random().then((v) => {
-      ++freq[v & 0xff]
-      ++freq[(v >>> 8) & 0xff]
-      ++freq[(v >>> 16) & 0xff]
-      ++freq[(v >>> 24) & 0xff]
-    }))
+    let p = [];
+    for (let i = 0; i < 256; ++i) freq[i] = 0;
+    for (let i = 0; i < 5 * 256; ++i) {
+      p.push(Sodium.randombytes_random().then((v) => {
+        ++freq[v & 0xff];
+        ++freq[(v >>> 8) & 0xff];
+        ++freq[(v >>> 16) & 0xff];
+        ++freq[(v >>> 24) & 0xff];
+      }));
+    }
+
     Promise.all(p).then(() => {
-      var fail = false
-      for (i = 0; i < 256 && !fail; ++i) if (!freq[i]) fail = true
-      this.setState({randombytes_random:!fail})
-    })
+      let fail = false;
+      for (let i = 0; i < 256 && !fail; ++i) if (!freq[i]) fail = true;
+      this.setState({ randombytes_random: !fail });
+    });
   }
 
-  _testSecretBox1() {
+  const _testSecretBox1 = () =>  {
 
     const k = Base64.fromByteArray(new Uint8Array([
       0x1b, 0x27, 0x55, 0x64, 0x73, 0xe9, 0x85, 0xd4, 0x62, 0xcd, 0x51, 0x19, 0x7a, 0x9a, 0x46, 0xc7,
@@ -124,11 +210,11 @@ export default class Example extends Component {
     this.setState({crypto_secretbox1:null})
 
     Sodium.crypto_secretbox_easy(m, n, k)
-     .then((c) => Sodium.crypto_secretbox_open_easy(c,n,k),handleError)
-     .then((mm) => this.setState({crypto_secretbox1:(m === mm)}),handleError)
+        .then((c) => Sodium.crypto_secretbox_open_easy(c,n,k),handleError)
+        .then((mm) => this.setState({crypto_secretbox1:(m === mm)}),handleError)
   }
 
-  _testAuth1() {
+  const _testAuth1 = () =>  {
     const k = Base64.fromByteArray(new Uint8Array([
       // Jefe
       0x4a,0x65,0x66,0x65,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -148,18 +234,18 @@ export default class Example extends Component {
     Sodium.crypto_auth(c,k).then((aa) => {
       this.setState({crypto_auth:(a === aa)})
       Sodium.crypto_auth_verify(a,c,k)
-        .then((r) => this.setState({crypto_auth_verify:(r == 0)}))
-        .catch((error) => {
-          this.setState({crypto_auth_verify:false})
-          this._handleError(error)
-        })
+          .then((r) => this.setState({crypto_auth_verify:(r == 0)}))
+          .catch((error) => {
+            this.setState({crypto_auth_verify:false})
+            this._handleError(error)
+          })
     }).catch((error) => {
       this.setState({crypto_auth_verify:false})
       this._handleError(error)
     })
   }
 
-  _testBox1() {
+  const _testBox1 = () =>  {
     this.setState({crypto_box1:null})
     const mlen_max = 1000
 
@@ -167,13 +253,13 @@ export default class Example extends Component {
       let p = []
       for (mlen = 0; mlen <= mlen_max; mlen++) {
         p.push(
-          Promise.all([
-            Sodium.randombytes_buf(Sodium.crypto_box_NONCEBYTES),
-            Sodium.randombytes_buf(mlen)
-          ]).then(([n,m]) =>
-             Sodium.crypto_box_easy(m,n,bob.pk,alice.sk)
-              .then((c) => Sodium.crypto_box_open_easy(c,n,alice.pk,bob.sk))
-              .then((mm) => mm === m))
+            Promise.all([
+              Sodium.randombytes_buf(Sodium.crypto_box_NONCEBYTES),
+              Sodium.randombytes_buf(mlen)
+            ]).then(([n,m]) =>
+                Sodium.crypto_box_easy(m,n,bob.pk,alice.sk)
+                    .then((c) => Sodium.crypto_box_open_easy(c,n,alice.pk,bob.sk))
+                    .then((mm) => mm === m))
         )
       }
       Promise.all(p).then((pr) => {
@@ -184,7 +270,7 @@ export default class Example extends Component {
     })
   }
 
-  _testBox2() {
+  const _testBox2 = () =>  {
     this.setState({crypto_box2:null})
     const alicepk = Base64.fromByteArray(new Uint8Array([
       0x85,0x20,0xf0,0x09,0x89,0x30,0xa7,0x54,0x74,0x8b,0x7d,0xdc,0xb4,0x3e,0xf7,0x5a,
@@ -229,96 +315,108 @@ export default class Example extends Component {
       0x79,0x73,0xf6,0x22,0xa4,0x3d,0x14,0xa6,0x59,0x9b,0x1f,0x65,0x4c,0xb4,0x5a,0x74,
       0xe3,0x55,0xa5]))
 
-      Sodium.crypto_box_easy(m,nonce,bobpk,alicesk).then((cc) => {
-        Sodium.crypto_box_open_easy(cc,nonce,alicepk,bobsk).then((mm) => {
-          this.setState({crypto_box2:(c === cc && m === mm)})
-        })
+    Sodium.crypto_box_easy(m,nonce,bobpk,alicesk).then((cc) => {
+      Sodium.crypto_box_open_easy(cc,nonce,alicepk,bobsk).then((mm) => {
+        this.setState({crypto_box2:(c === cc && m === mm)})
       })
+    })
   };
 
+  const _testSodium = async () => {
+    try {
+      console.log('Sodium', Sodium);
+      const version = await NativeModules.Sodium.sodium_version_string();
+      setState({ sodium_version_string: version });
 
-  _testSodium() {
-    Sodium.sodium_version_string()
-      .then((version) => this.setState({sodium_version_string: version}))
-      .catch((error) => this._handleError(error))
+
+    } catch(e) {
+      console.log('ERROR', e);
+      _handleError(e);
+    }
 
     // Random data generation
-    this._testRandom1()
-    this._testRandom2()
-    this._testRandom3()
+    // _testRandom1()
+    // this._testRandom2()
+    // this._testRandom3()
 
     // Secret key cryptography - authenticated encryption
-    this._testSecretBox1()
+    // this._testSecretBox1()
 
     // Secret key cryptography - authentication
-    this._testAuth1()
+    // this._testAuth1()
 
     // Public-key cryptography - authenticated encryption
-    this._testBox1()
-    this._testBox2()
+    // this._testBox1()
+    // this._testBox2()
   }
 
-  componentDidMount() {
-     this._testSodium()
-  }
+  useEffect(() => {
+    _testSodium().then(() => console.log('done'));
+  }, []);
 
-  render() {
-    return (
-      <ScrollView style={{flex:1}}>
-        <TouchableHighlight onPress={() => this._testSodium()}>
-          <Text style={styles.welcome}>
-            Salted React Native!
-          </Text>
-        </TouchableHighlight>
-        <TestValue name="sodium_version_string" value={this.state.sodium_version_string}/>
-        <TestResult name="randombytes_random" value={this.state.randombytes_random}/>
-        <TestResult name="randombytes_uniform" value={this.state.randombytes_uniform}/>
-        <TestResult name="randombytes_buf" value={this.state.randombytes_buf}/>
-        <TestResult name = "crypto_secretbox1" value={this.state.crypto_secretbox1}/>
-        <TestResult name = "crypto_auth" value={this.state.crypto_auth}/>
-        <TestResult name = "crypto_auth_verify" value={this.state.crypto_auth_verify}/>
-        <TestResult name = "crypto_box1" value={this.state.crypto_box1}/>
-        <TestResult name = "crypto_box2" value={this.state.crypto_box2}/>
-      </ScrollView>
-    )
-  }
-
-}
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+          <View style={styles.body}>
+            <TestValue
+                name="sodium_version_string" value={state.sodium_version_string}
+            />
+            <TestResult name="randombytes_random" value={state.randombytes_random}/>
+            <TestResult name="randombytes_uniform" value={state.randombytes_uniform}/>
+            <TestResult name="randombytes_buf" value={state.randombytes_buf} />
+            <TestResult name = "crypto_secretbox1" value={state.crypto_secretbox1}/>
+            <TestResult name = "crypto_auth" value={state.crypto_auth}/>
+            <TestResult name = "crypto_auth_verify" value={state.crypto_auth_verify}/>
+            <TestResult name = "crypto_box1" value={state.crypto_box1}/>
+            <TestResult name = "crypto_box2" value={state.crypto_box2}/>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-   //justifyContent: 'center',
-    //alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    padding:5
+  scrollView: {
+    backgroundColor: Colors.lighter,
   },
+  engine: {
+    position: 'absolute',
+    right: 0,
+  },
+  body: {
+    backgroundColor: Colors.white,
+  },
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+    color: Colors.dark,
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+  footer: {
+    color: Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right',
+  },
+});
 
-  testContainer: {
-    flex: 1,
-    flexDirection:'row',
-    padding:5
-  },
-
-  testLabel: {
-    flex:4,
-    textAlign: 'left',
-    color: '#333333',
-  },
-
-  testResult: {
-    flex:1,
-    textAlign: 'center',
-  },
-
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'left',
-    color: '#333333',
-    marginBottom: 5,
-  },
-})
+export default App;
