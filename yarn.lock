@@ -4887,10 +4887,10 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-sodium@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/react-native-sodium/-/react-native-sodium-0.3.6.tgz#c1c0058becc866ae0d60257aa53cb81a9fd4a8fc"
-  integrity sha512-1lZBpIF9mvYlgGH1tlHCNBnhMeNwFmWkok55p5Lu1Td5bYya2iUbLyfQyDcMk8RXnab2V6c/o76hmxt0tqmuWg==
+react-native-sodium@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/react-native-sodium/-/react-native-sodium-0.3.7.tgz#1ad954f28d11cc89ca54abe6d422d20b63c861a7"
+  integrity sha512-vIdpoILmLXVLwpH5CUbsQbEBI6qRrci7Lrj4SYOoYYXKcBJyWnVigwTiYybRhH7XvXvJZ5A96q42EH8SqtOdhA==
 
 react-native@0.62.2:
   version "0.62.2"
