@@ -1,5 +1,5 @@
 {
-  "name": "RNSodiumExample",
+  "name": "react-native-sodium-example",
   "version": "0.0.4",
   "scripts": {
     "android": "react-native run-android",
