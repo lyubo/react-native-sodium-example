@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RNSodiumExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNSodiumExampleTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18E271079304302573AECCAF /* libPods-RNSodiumExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0226B195B3C0FF55DD5EF30 /* libPods-RNSodiumExample.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNSodiumExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNSodiumExampleTests.m */; };
-		3CA7CBB52CB5806946F9CFC4 /* libPods-RNSodiumExample-RNSodiumExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D813CE10387191D82C6020B4 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */; };
-		91C200DFE01D82F26596FA12 /* libPods-RNSodiumExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4CF774F1E542A9D32E4230 /* libPods-RNSodiumExample.a */; };
-		CC2CA3115F3F65BD390561AA /* libPods-RNSodiumExample-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FBFADC6C10C85F4AA1BACE /* libPods-RNSodiumExample-tvOSTests.a */; };
-		E50EDDFDE307FE4A828EE0C8 /* libPods-RNSodiumExample-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A5C069E6D4CE56ABB10CC0 /* libPods-RNSodiumExample-tvOS.a */; };
+		43473AB18BEB770E6A3EDB37 /* libPods-RNSodiumExample-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E56AEC9D104C6734492C698 /* libPods-RNSodiumExample-tvOS.a */; };
+		675B8B071F0EE93E2211221F /* libPods-RNSodiumExample-RNSodiumExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DC838FDF956EF411FD6D82 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B14B9D42BF88240325574D56 /* libPods-RNSodiumExample-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5E658540E5139B027B80F /* libPods-RNSodiumExample-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,29 +44,29 @@
 		00E356EE1AD99517003FC87E /* RNSodiumExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNSodiumExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNSodiumExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSodiumExampleTests.m; sourceTree = "<group>"; };
-		0216DDF1F76EE8EBC9A50AF8 /* Pods-RNSodiumExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample.release.xcconfig"; sourceTree = "<group>"; };
+		0CC5E658540E5139B027B80F /* libPods-RNSodiumExample-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E56AEC9D104C6734492C698 /* libPods-RNSodiumExample-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* RNSodiumExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNSodiumExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNSodiumExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNSodiumExample/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNSodiumExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNSodiumExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNSodiumExample/main.m; sourceTree = "<group>"; };
-		15FBFADC6C10C85F4AA1BACE /* libPods-RNSodiumExample-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28B570970D00E6E17D941071 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNSodiumExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNSodiumExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNSodiumExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNSodiumExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		550F284DC42471E5AB9291E5 /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOSTests/Pods-RNSodiumExample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		796D7BDBFEDD069AD90ECC5D /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOSTests/Pods-RNSodiumExample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		8F5D4A4696C07F28AC72971B /* Pods-RNSodiumExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOS/Pods-RNSodiumExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		99A5C069E6D4CE56ABB10CC0 /* libPods-RNSodiumExample-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2527048AA1FCDDEF67FE009 /* Pods-RNSodiumExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample.debug.xcconfig"; sourceTree = "<group>"; };
-		AF4CF774F1E542A9D32E4230 /* libPods-RNSodiumExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5906AE710B6EF60D5C3EFD4 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D106CD3C3F796C6EAF705B6C /* Pods-RNSodiumExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOS/Pods-RNSodiumExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		D813CE10387191D82C6020B4 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-RNSodiumExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F25B48156EB453B06E7ABFC /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOSTests/Pods-RNSodiumExample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E5B4D0A6941EEC147BAD07C /* Pods-RNSodiumExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample.release.xcconfig"; sourceTree = "<group>"; };
+		4FF33F5DEBCAE26501DFF0B5 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EEF1638D2C7E843D411D1D0 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNSodiumExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		828688B6C48DEB28B4DDBF8D /* Pods-RNSodiumExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample.debug.xcconfig"; sourceTree = "<group>"; };
+		92DC838FDF956EF411FD6D82 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample-RNSodiumExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66CDE6316DBBD8B4D8C45E3 /* Pods-RNSodiumExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOS/Pods-RNSodiumExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C621D9372F1B54D0CC8D11A1 /* Pods-RNSodiumExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOS/Pods-RNSodiumExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E26721E4D2BBF853B464D8FD /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSodiumExample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNSodiumExample-tvOSTests/Pods-RNSodiumExample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F0226B195B3C0FF55DD5EF30 /* libPods-RNSodiumExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNSodiumExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA7CBB52CB5806946F9CFC4 /* libPods-RNSodiumExample-RNSodiumExampleTests.a in Frameworks */,
+				675B8B071F0EE93E2211221F /* libPods-RNSodiumExample-RNSodiumExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C200DFE01D82F26596FA12 /* libPods-RNSodiumExample.a in Frameworks */,
+				18E271079304302573AECCAF /* libPods-RNSodiumExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E50EDDFDE307FE4A828EE0C8 /* libPods-RNSodiumExample-tvOS.a in Frameworks */,
+				43473AB18BEB770E6A3EDB37 /* libPods-RNSodiumExample-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2CA3115F3F65BD390561AA /* libPods-RNSodiumExample-tvOSTests.a in Frameworks */,
+				B14B9D42BF88240325574D56 /* libPods-RNSodiumExample-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = RNSodiumExample;
@@ -141,12 +141,28 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				AF4CF774F1E542A9D32E4230 /* libPods-RNSodiumExample.a */,
-				D813CE10387191D82C6020B4 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */,
-				99A5C069E6D4CE56ABB10CC0 /* libPods-RNSodiumExample-tvOS.a */,
-				15FBFADC6C10C85F4AA1BACE /* libPods-RNSodiumExample-tvOSTests.a */,
+				F0226B195B3C0FF55DD5EF30 /* libPods-RNSodiumExample.a */,
+				92DC838FDF956EF411FD6D82 /* libPods-RNSodiumExample-RNSodiumExampleTests.a */,
+				0E56AEC9D104C6734492C698 /* libPods-RNSodiumExample-tvOS.a */,
+				0CC5E658540E5139B027B80F /* libPods-RNSodiumExample-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		619FC812E4E0F489B488AE1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				828688B6C48DEB28B4DDBF8D /* Pods-RNSodiumExample.debug.xcconfig */,
+				3E5B4D0A6941EEC147BAD07C /* Pods-RNSodiumExample.release.xcconfig */,
+				6EEF1638D2C7E843D411D1D0 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */,
+				4FF33F5DEBCAE26501DFF0B5 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */,
+				C621D9372F1B54D0CC8D11A1 /* Pods-RNSodiumExample-tvOS.debug.xcconfig */,
+				B66CDE6316DBBD8B4D8C45E3 /* Pods-RNSodiumExample-tvOS.release.xcconfig */,
+				2F25B48156EB453B06E7ABFC /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */,
+				E26721E4D2BBF853B464D8FD /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -164,7 +180,7 @@
 				00E356EF1AD99517003FC87E /* RNSodiumExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				DAE81389E4298158D04B5CED /* Pods */,
+				619FC812E4E0F489B488AE1B /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -182,22 +198,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAE81389E4298158D04B5CED /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A2527048AA1FCDDEF67FE009 /* Pods-RNSodiumExample.debug.xcconfig */,
-				0216DDF1F76EE8EBC9A50AF8 /* Pods-RNSodiumExample.release.xcconfig */,
-				B5906AE710B6EF60D5C3EFD4 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */,
-				28B570970D00E6E17D941071 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */,
-				8F5D4A4696C07F28AC72971B /* Pods-RNSodiumExample-tvOS.debug.xcconfig */,
-				D106CD3C3F796C6EAF705B6C /* Pods-RNSodiumExample-tvOS.release.xcconfig */,
-				550F284DC42471E5AB9291E5 /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */,
-				796D7BDBFEDD069AD90ECC5D /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,10 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNSodiumExampleTests" */;
 			buildPhases = (
-				65559FB5D355F53177B15D19 /* [CP] Check Pods Manifest.lock */,
+				2837A31E2A0F9C79719462C5 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				D10FE579C81B4F0E7FACE0AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,12 +225,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNSodiumExample" */;
 			buildPhases = (
-				52522B6D82BADE5D324B13A1 /* [CP] Check Pods Manifest.lock */,
+				E8A23FC0123287F1EDBF63B5 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				841704112264D918B446629D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNSodiumExample-tvOS" */;
 			buildPhases = (
-				BF8FBBAA1A769FF8827E3221 /* [CP] Check Pods Manifest.lock */,
+				F8ED80A190D890CE072B5197 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -264,7 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNSodiumExample-tvOSTests" */;
 			buildPhases = (
-				E54DB47B2DF5C052D69F1E78 /* [CP] Check Pods Manifest.lock */,
+				D391171CEDE1D9F28B80BE1C /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -338,8 +340,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,43 +377,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		52522B6D82BADE5D324B13A1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNSodiumExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		65559FB5D355F53177B15D19 /* [CP] Check Pods Manifest.lock */ = {
+		2837A31E2A0F9C79719462C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,29 +399,57 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF8FBBAA1A769FF8827E3221 /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "Bundle React Native Code And Images";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNSodiumExample-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		841704112264D918B446629D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNSodiumExample/Pods-RNSodiumExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E54DB47B2DF5C052D69F1E78 /* [CP] Check Pods Manifest.lock */ = {
+		D10FE579C81B4F0E7FACE0AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNSodiumExample-RNSodiumExampleTests/Pods-RNSodiumExample-RNSodiumExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D391171CEDE1D9F28B80BE1C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -471,6 +465,50 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RNSodiumExample-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A23FC0123287F1EDBF63B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNSodiumExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8ED80A190D890CE072B5197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNSodiumExample-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -567,22 +605,10 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = RNSodiumExample;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5906AE710B6EF60D5C3EFD4 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 6EEF1638D2C7E843D411D1D0 /* Pods-RNSodiumExample-RNSodiumExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -590,7 +616,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RNSodiumExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -605,12 +631,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28B570970D00E6E17D941071 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */;
+			baseConfigurationReference = 4FF33F5DEBCAE26501DFF0B5 /* Pods-RNSodiumExample-RNSodiumExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNSodiumExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -625,16 +651,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2527048AA1FCDDEF67FE009 /* Pods-RNSodiumExample.debug.xcconfig */;
+			baseConfigurationReference = 828688B6C48DEB28B4DDBF8D /* Pods-RNSodiumExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"FB_SONARKIT_ENABLED=1",
-				);
 				INFOPLIST_FILE = RNSodiumExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -652,7 +674,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0216DDF1F76EE8EBC9A50AF8 /* Pods-RNSodiumExample.release.xcconfig */;
+			baseConfigurationReference = 3E5B4D0A6941EEC147BAD07C /* Pods-RNSodiumExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -673,7 +695,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F5D4A4696C07F28AC72971B /* Pods-RNSodiumExample-tvOS.debug.xcconfig */;
+			baseConfigurationReference = C621D9372F1B54D0CC8D11A1 /* Pods-RNSodiumExample-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -695,13 +717,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D106CD3C3F796C6EAF705B6C /* Pods-RNSodiumExample-tvOS.release.xcconfig */;
+			baseConfigurationReference = B66CDE6316DBBD8B4D8C45E3 /* Pods-RNSodiumExample-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -723,13 +745,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 550F284DC42471E5AB9291E5 /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 2F25B48156EB453B06E7ABFC /* Pods-RNSodiumExample-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -756,7 +778,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 796D7BDBFEDD069AD90ECC5D /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = E26721E4D2BBF853B464D8FD /* Pods-RNSodiumExample-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -828,7 +850,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
@@ -881,7 +903,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
