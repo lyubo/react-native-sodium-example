@@ -7,7 +7,7 @@ import RandomDataTests from './SodiumTests/RandomDataTests'
 import SecretKeyCryptographyTests from './SodiumTests/SecretKeyCryptographyTests'
 import PublicKeyCryptographyTests from './SodiumTests/PublicKeyCryptographyTests'
 import PasswordHashingTests from './SodiumTests/PasswordHashingTests'
-
+import AdvancedTests from './SodiumTests/AdvancedTests'
 
 export default function YourApp() {
 
@@ -32,6 +32,7 @@ export default function YourApp() {
             <Button onPress={() => setSelectedTest(2)} title="Secret-key cryptography"/>
             <Button onPress={() => setSelectedTest(3)} title="Public-key cryptography"/>
             <Button onPress={() => setSelectedTest(4)} title="Password Hashing"/>
+            <Button onPress={() => setSelectedTest(5)} title="Advanced"/>
           </View>
         }
         <View style={{flex:1}}>
@@ -39,6 +40,7 @@ export default function YourApp() {
           {selectedTest == 2 && <SecretKeyCryptographyTests/> }
           {selectedTest == 3 && <PublicKeyCryptographyTests/> }
           {selectedTest == 4 && <PasswordHashingTests/> }
+          {selectedTest == 5 && <AdvancedTests/> }
 
         </View>
         {selectedTest != 0 &&

@@ -80,4 +80,18 @@ export class BasicTest extends Component {
     )
   }
 
+  hex2bin(hex){
+    const result = new Uint8Array(hex.length / 2)
+    for(var i = 0; i < hex.length-1; i += 2) result[i/2] = parseInt(hex.substr(i, 2), 16)
+    return result
+  }
+
+  bin2hex(bytes) {
+
+    return Array.from(bytes).map(byte => {
+      const unsignedByte = byte & 0xff;
+      return (unsignedByte < 16) ? '0' + unsignedByte.toString(16): unsignedByte.toString(16)
+    }).join('')
+  }
+
 }

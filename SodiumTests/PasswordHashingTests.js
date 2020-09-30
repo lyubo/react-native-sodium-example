@@ -6,20 +6,6 @@ import Sodium from 'react-native-sodium'
 
 import {BasicTest} from './BasicTest'
 
-function hex2bin(hex){
-  const result = new Uint8Array(hex.length / 2)
-  for(var i = 0; i < hex.length-1; i += 2) result[i/2] = parseInt(hex.substr(i, 2), 16)
-  return result
-}
-
-function bin2hex(bytes) {
-
-  return Array.from(bytes).map(byte => {
-    const unsignedByte = byte & 0xff;
-    return (unsignedByte < 16) ? '0' + unsignedByte.toString(16): unsignedByte.toString(16)
-  }).join('')
-}
-
 export default class Test extends BasicTest {
 
   constructor(props) {
@@ -173,10 +159,10 @@ export default class Test extends BasicTest {
     ]
 
     Promise.all(tests.map(t => {
-      const passwd = Base64.fromByteArray(hex2bin(t.passwd_hex))
-      const salt = Base64.fromByteArray(hex2bin(t.salt_hex))
+      const passwd = Base64.fromByteArray(this.hex2bin(t.passwd_hex))
+      const salt = Base64.fromByteArray(this.hex2bin(t.salt_hex))
       return Sodium.crypto_pwhash(t.outlen,passwd,salt,t.opslimit,t.memlimit,Sodium.crypto_pwhash_ALG_ARGON2I13)
-        .then(out64 => t.out_hex === bin2hex(Base64.toByteArray(out64))).catch(e => {if (t.out_hex == null) return true;throw e})
+        .then(out64 => t.out_hex === this.bin2hex(Base64.toByteArray(out64))).catch(e => {if (t.out_hex == null) return true;throw e})
     }))
     .then(results => this.testPassed('crypto_pwhash',results.find(t => t == false) == undefined?true:false))
     .catch((error) =>  this.testFailed('crypto_pwhash',error))
